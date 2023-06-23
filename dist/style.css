@@ -1,0 +1,87 @@
+.toggle__line {
+    display: inline-block;
+    height: 24px;
+    position: relative;
+    width: 48px;
+}
+
+.toggle__dot {
+    display: block;
+    height: 24px;
+    position: absolute;
+    top: 0;
+    /* This is new, to center the dot */
+    transition: all 0.3s ease-in-out;
+    width: 24px;
+}
+
+input[type="checkbox"] {
+    height: 0;
+    opacity: 0;
+    width: 0;
+}
+
+input[type="checkbox"]:checked~.toggle__dot {
+    transform: translateX(100%);
+    background-color: #4F46E5;
+}
+
+input[type="checkbox"]:not(:checked)~.toggle__dot {
+    background-color: #ffffff;
+    transform: translateX(0);
+}
+
+/* was not working in tailwind because go f yourself so i make it here */
+html.dark #timer-display {
+    color: white;
+  }
+
+/* style by id cause class doesnt work for this (jsuis juste mauvais) */
+
+#speedInput::placeholder {
+    font-style: italic;
+}
+
+#speedInput {
+    padding-left: 1rem;  /* Adjust this value to your preference */
+}
+
+#multiDropInput::placeholder {
+    font-style: italic;
+}
+
+#multiDropInput {
+    padding-left: 1rem;  /* Adjust this value to your preference */
+}
+
+#fuelInput::placeholder {
+    font-style: italic;
+}
+
+#fuelInput {
+    padding-left: 1rem;  /* Adjust this value to your preference */
+}
+
+#biomassInput::placeholder {
+    font-style: italic;
+}
+
+#biomassInput {
+    padding-left: 1rem;  /* Adjust this value to your preference */
+}
+
+#c_ReductionInput::placeholder {
+    font-style: italic;
+}
+
+#c_ReductionInput {
+    padding-left: 1rem;  /* Adjust this value to your preference */
+}
+
+/* media queries rules than doesnt work in tailwind cause of the important inheritance */
+@media (max-width: 639px) {
+    #div1,
+    #div2 {
+      display: none;
+    }
+}

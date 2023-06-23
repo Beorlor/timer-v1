@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timer</title>
+  <link href="dist/output.css" rel="stylesheet">
+  <link href="dist/style.css" rel="stylesheet">
+  <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+</head>
+
+<body class="dark:bg-blue-950">
+  <!--name top left-->
+  <div id="div1" class="fixed top-0 left-0 m-6">
+    <h1 class="text-4xl font-bold text-blue-500 hover:text-blue-700">Composter Consumption</h1>
+  </div>
+  <div id="div2" class="fixed top-12 left-0 m-6">
+    <h4 class="text-2xl font-normal text-gray-500">dark mode toogle at start ?</h4>
+  </div>
+  <!--Menu bouton-->
+  <div class="fixed top-0 right-0 m-6">
+    <button id="menuButton"
+      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded dark:text-black">Menu</button>
+    <!--popup menu-->
+    <div id="popupMenu"
+      class="absolute top-12 right-0 w-64 mt-2 py-2 bg-white dark:bg-gray-800 rounded-lg shadow-xl hidden">
+      <form>
+        <label class="block px-4 py-2 text-gray-800 dark:text-gray-200">
+          <span id="speed">Loading...</span>
+          <input id='speedInput' type="number" min="1" max="25" inputmode="numeric"
+            class="mt-1 block w-full rounded-md bg-gray-100 dark:bg-gray-500 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0">
+        </label>
+        <label class="block px-4 py-2 text-gray-800 dark:text-gray-200">
+          <span id="multiDrop">Loading...</span>
+          <input id='multiDropInput' type="number" min="1" max="25" inputmode="numeric"
+            class="mt-1 block w-full rounded-md bg-gray-100 dark:bg-gray-500 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0">
+        </label>
+        <label class="block px-4 py-2 text-gray-800 dark:text-gray-200">
+          <span id="fuel">Loading...</span>
+          <input id='fuelInput' type="number" min="1" max="25" inputmode="numeric"
+            class="mt-1 block w-full rounded-md bg-gray-100 dark:bg-gray-500 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0">
+        </label>
+        <label class="block px-4 py-2 text-gray-800 dark:text-gray-200">
+          <span id="biomass">Loading...</span>
+          <input id='biomassInput' type="number" min="1" max="25" inputmode="numeric"
+            class="mt-1 block w-full rounded-md bg-gray-100 dark:bg-gray-500 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0">
+        </label>
+        <label class="block px-4 py-2 text-gray-800 dark:text-gray-200">
+          <span id="c_Reduction">Loading...</span>
+          <input id='c_ReductionInput' type="number" min="1" max="25" inputmode="numeric"
+            class="mt-1 block w-full rounded-md bg-gray-100 dark:bg-gray-500 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0">
+        </label>
+        <button id='submitButton' type="button"
+          class="block w-full px-4 py-2 text-white bg-yellow-500 hover:bg-yellow-600">Submit</button>
+      </form>
+      <div class="px-4 py-2 bg-white dark:bg-gray-800 mt-2">
+        <!--space -->
+      </div>
+      <!--toogle dark mode -->
+      <div class="flex items-center justify-center px-4 py-2 mt-2 bg-white dark:bg-gray-800 rounded-lg space-x-2">
+        <img src="img/sun.png" class="w-6 h-6" />
+        <label for="toggle" class="flex items-center cursor-pointer space-x-2">
+          <div class="relative">
+            <input id="toggle" type="checkbox" class="sr-only" />
+            <div class="toggle__line w-10 h-4 bg-gray-400 rounded-full shadow-inner"></div>
+            <div
+              class="toggle__dot absolute top-0 left-0 w-6 h-6 bg-white rounded-full shadow transition-all duration-300">
+            </div>
+          </div>
+        </label>
+        <img src="img/moon.png" class="w-6 h-6" />
+      </div>
+    </div>
+  </div>
+  <!--timer-->
+  <div class="flex items-center justify-center bg-gray-100 min-h-screen dark:bg-blue-950">
+    <div class="p-4 shadow rounded bg-white dark:bg-blue-900">
+      <h1 id="timer-display" class="text-3xl mb-4">Loading...</h1>
+      <button id="reset-button"
+        class="py-2 px-4 bg-blue-500 hover:bg-blue-700 text-white rounded dark:text-black dark:bg-blue-700 dark:hover:bg-gray-700">Reset
+        Timer</button>
+    </div>
+  </div>
+  <script src="src/main.js"></script>
+</body>
+
+</html>
